@@ -1,0 +1,16 @@
+expr    ::= term { (+|-) term }*
+term    ::= factor { (*|/) factor }*
+factor  ::= ( expr )
+        |   NUM
+
+Say we get the input 3 + 4 * 5
+Once we tokenize it it may look like
+NUM + NUM * NUM
+
+we read it in first as an expr
+expr ::= term { (+|-) term }*
+expr ::= term + term
+expr ::= factor { (*|/) factor }* + factor { (*|/) factor }*
+expr ::= factor + factor * factor
+expr ::= NUM + NUM * NUM
+
