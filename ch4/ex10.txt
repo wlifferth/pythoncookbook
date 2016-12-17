@@ -1,0 +1,6 @@
+a 4 b
+c 3 d
+a a a
+s
+sd a d
+thing 14 alpha
